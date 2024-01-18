@@ -1,0 +1,17 @@
+.weather-data-group{
+    border: 1px solid red;
+
+}
+
+.weather-location-group{
+    display: flex;
+    gap: 32px;
+    background-color: white;
+    padding: 0px 32px;
+    border-bottom: 3px solid black;
+}
+
+.temp-group{
+    font-size: 28px;
+    font-weight: 700;
+}
