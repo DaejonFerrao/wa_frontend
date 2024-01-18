@@ -7,10 +7,10 @@ const NavBar = () => {
         <div>
             <div className="container">
                 <div className="topnav">
-                    <a href="Home">Home</a>
-                    <a href="News">News</a>
-                    <a href="Contact">Contact</a>
-                    <a href="About">About</a>
+                    <a href="Button">Sign Up</a>
+                    <a href="Button">News</a>
+                    <a href="Button">Contact</a>
+                    <a href="Button">About</a>
                 </div>
             </div>
         </div>

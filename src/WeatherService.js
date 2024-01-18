@@ -10,6 +10,7 @@ export const currentWeater = async () =>{
 
      const {name, main:{humidity, temp, temp_max, temp_min}, sys:{country},wind:{speed}} = currentWeather
      
+     
 
      return {name,humidity, temp, temp_max, temp_min,country,speed} 
 }
