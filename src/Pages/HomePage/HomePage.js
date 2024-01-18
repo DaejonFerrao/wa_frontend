@@ -22,19 +22,19 @@ export const HomePage = () => {
     <div>
       <h1>Home page</h1>
       <div className="weather-data-group">
-
+        <input className="input" placeholder="Enter city name.." />
       <div className="weather-location-group">
         <h1>{currentWeatherState.country}</h1>
         <h1>{currentWeatherState.name}</h1>
       </div>
 
       <div className="temp-group">
-        <span>Tempetature: </span><span>{currentWeatherState.temp}</span>
+        <span>Temp: </span><span>{currentWeatherState.temp}</span>
       </div>
-        <h3>{currentWeatherState.humidity}</h3>
-        <h4>{currentWeatherState.speed}</h4>
+        <span>Humidity: </span><span>{currentWeatherState.humidity}</span>
+        <span>Speed: </span><span>{currentWeatherState.speed}</span>
         
-        <h6>{currentWeatherState.temp_min}</h6>
+        <span>Min Temp: </span><span> {currentWeatherState.temp_min}</span>
         
       </div>
     </div>

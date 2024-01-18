@@ -22,7 +22,7 @@
     background-color: #ddd;
     color: black;
 }
-
+/* 
 .Button {
     outline: none;
     cursor: pointer;
@@ -74,4 +74,4 @@
    Button:hover::before {
     transform: translate3d(100%, 0, 0);
    }
-   
+    */
