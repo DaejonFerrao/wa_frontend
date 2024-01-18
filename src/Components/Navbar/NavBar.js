@@ -5,14 +5,12 @@ import "./NavBar.css"
 const NavBar = () => {
     return (
         <div>
-            <div className="bg-img">
-                <div className="container">
-                    <div className="topnav">
-                        <a href="Home">Home</a>
-                        <a href="News">News</a>
-                        <a href="Contact">Contact</a>
-                        <a href="About">About</a>
-                    </div>
+            <div className="container">
+                <div className="topnav">
+                    <a href="Home">Home</a>
+                    <a href="News">News</a>
+                    <a href="Contact">Contact</a>
+                    <a href="About">About</a>
                 </div>
             </div>
         </div>
