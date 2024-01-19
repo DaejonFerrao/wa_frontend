@@ -5,24 +5,22 @@ import { useState } from 'react';
 import NavBar from './Components/Navbar/NavBar';
 import { HomePage } from './Pages/HomePage/HomePage';
 import Register from './Pages/Register/Register';
+import Login from './Pages/Login/Login';
 
 function App() {
 
-  const [currentForm, setCurrentForm] = useState("Login");
 
-    const toggleForm = (formName) => {
-      setCurrentForm(formName);
-    }
+
+    
 
   return (
     <div className="App">
 
       <BrowserRouter>
       <NavBar />
-      {
-        currentForm === "Login" ? <login onFormSwitch={toggleForm}/> : <Register onFormSwitch={toggleForm}/>
-      }
+  
       <Routes>
+        <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
         <Route path='/Home' element={<HomePage/>}/>
 
