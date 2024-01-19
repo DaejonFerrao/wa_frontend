@@ -6,7 +6,8 @@
 
 .topnav {
     overflow: hidden;
-    background-color: transparent;
+    background-color: white;
+    width: 100%;
 }
 
 .topnav a {
