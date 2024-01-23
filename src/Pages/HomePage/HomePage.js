@@ -30,12 +30,12 @@ export const HomePage = () => {
 
       <div className="temp-group">
         <span>Temp: </span><span>{currentWeatherState.temp}</span>
-      </div>
+      
         <span>Humidity: </span><span>{currentWeatherState.humidity}</span>
         <span>Speed: </span><span>{currentWeatherState.speed}</span>
         
         <span>Min Temp: </span><span> {currentWeatherState.temp_min}</span>
-        
+        </div>
       </div>
     </div>
   )
