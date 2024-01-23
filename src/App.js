@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import NavBar from './Components/Navbar/NavBar';
 // import { HomePage } from './Pages/HomePage/HomePage';
@@ -13,8 +13,8 @@ import { WEATHER_API_URL, WEATHER_API_KEY } from './Components/Api/Api';
 import Forecast from './Components/Forecast/Forecast';
 
 function App() {
-  const [WeatherFetch, setCurrentWeather] = useState(null);
-  const [forecast, setForecast] = useState(null);
+  const [weatherData, setCurrentWeatherData] = useState(null);
+  const [forecastData, setForecastData] = useState(null);
 
   const handleOnSearchChange = (searchData) => {
    const [lat, lon] = searchData.value.split("");
@@ -22,20 +22,19 @@ function App() {
   const WeatherFetch = fetch(`${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`); 
   const forecastFetch = fetch(`${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`); 
 
-    Promise.all([WeatherFetch, forecastFetch])
-      .then(async (response) => {
+  Promise.all([WeatherFetch, forecastFetch])
+    .then(async (response) => {
         const weatherResponse = await response[0].json();
         const forecastResponse = await response[1].json();
+        console.log(forecastResponse)
 
-        setCurrentWeather({city: searchData.label , ...weatherResponse});
-        setForecast({city: searchData.label, ...forecastResponse});
+        setCurrentWeatherData({city: searchData.label , ...weatherResponse});
+        setForecastData({city: searchData.label, ...forecastResponse});
 
       })
       .catch((err) => console.log(err));
   }
 
-    console.log(WeatherFetch);
-    console.log(forecast);
 
   return (
     <div className="App">
@@ -49,8 +48,8 @@ function App() {
         {/* <Route path='/Home' element={<HomePage/>}/> */}
         </Routes>
         <SearchBar onSearchChange={handleOnSearchChange} />
-        {Weather && <Weather data={WeatherFetch} />}
-        {Forecast && <Forecast data={forecast}/>}
+        {weatherData && <Weather data={weatherData} />}
+        {forecastData && <Forecast data={forecastData}/>}
       </BrowserRouter>
     </div>
   );
