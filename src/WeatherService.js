@@ -1,10 +1,10 @@
 
 import axios from 'axios'
 const APIKey = 'bf2c20a1f20c38e0a1d11eb86ac5fe91'
-const city = 'London'
+// const city = 'London'
 
 
-export const currentWeater = async () =>{
+export const currentWeater = async (city) =>{
      const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&units=metric`
      const currentWeather = await axios.get(URL).then(response => response.data)
      console.log(currentWeather)
@@ -14,4 +14,12 @@ export const currentWeater = async () =>{
      
 
      return {name,humidity, temp, temp_max, temp_min,country,speed} 
+}
+
+
+export const getForecast = async (city) => {
+     //get the url same as above
+     // get the forecast
+     //log it to console
+     //return the 5 day forecast, preferably formatted but it might already be formatted.
 }

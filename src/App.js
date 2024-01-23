@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useEffect, useState } from 'react';
 
 import NavBar from './Components/Navbar/NavBar';
-// import { HomePage } from './Pages/HomePage/HomePage';
+import { HomePage } from './Pages/HomePage/HomePage';
 import Register from './Pages/Register/Register';
 import Login from './Pages/Login/Login';
 import About from './Pages/About/About';
@@ -45,7 +45,8 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
-        {/* <Route path='/Home' element={<HomePage/>}/> */}
+        <Route path={'/'} element={<HomePage/>}/>
+        <Route path={'/Home'} element={<HomePage/>}/>
         </Routes>
         <SearchBar onSearchChange={handleOnSearchChange} />
         {weatherData && <Weather data={weatherData} />}

@@ -33,13 +33,16 @@ const SearchBar = ({ onSearchChange }) => {
     }
 
     return (
-        <AsyncPaginate
-            placeholder="Search"
-            debounceTimeout={600}
-            value={search}
-            onChange={handleOnChange}
-            loadOptions={loadOptions}
-        />
+        <div>
+            test
+        </div>
+        // <AsyncPaginate
+        //     placeholder="Search"
+        //     debounceTimeout={600}
+        //     value={search}
+        //     onChange={handleOnChange}
+        //     loadOptions={loadOptions}
+        // />
     );
 };
 
