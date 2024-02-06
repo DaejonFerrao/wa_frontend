@@ -1,21 +1,14 @@
-.weather-data-group{
-    border: 1px solid red;
+.weather-data-group {
+    /* border: 1px solid red; */
 
 }
 
-.weather-location-group{
+.weather-location-group {
     display: flex;
     gap: 32px;
     background-color: white;
     padding: 0px 32px;
     border-bottom: 3px solid black;
-}
-
-.temp-group{
-    font-size: 28px;
-    font-weight: 800;
-    display: flex;
-    margin-left: 50px;
 }
 
 .input {
@@ -30,4 +23,44 @@
 
 .input:focus {
     outline: none;
+}
+
+.temp {
+    font-size: 28px;
+    font-weight: 100px;
+    margin-right: 50%;
+    flex-direction: column;
+    display: flex;
+}
+
+.Humidity{
+    margin-right: 50px;
+    font-size: 28px;
+    font-weight: 100px;
+    flex-direction: column;
+    display: flex;
+}
+
+.Speed {
+    margin-left: 50px;
+    font-size: 28px;
+    font-weight: 100px;
+    flex-direction: column;
+    display: flex;
+}
+
+.Min{
+    margin-left: 50px;
+    font-size: 28px;
+    font-weight: 100px;
+    flex-direction: column;
+    display: flex;
+}
+
+.temp-num{
+    margin-left: 200px;
+    font-size: 28px;
+    font-weight: 100px;
+    flex-direction: column;
+    display: flex;
 }

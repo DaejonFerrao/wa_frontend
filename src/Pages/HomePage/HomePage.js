@@ -23,7 +23,6 @@ export const HomePage = () => {
   return (
 
     <div>
-      <h1>Home page</h1>
       <div className="weather-data-group">
 
         <form onSubmit={(e) => {
@@ -39,14 +38,14 @@ export const HomePage = () => {
           <h1>{currentWeatherState.name}</h1>
         </div>
 
-        <div className="temp-group">
-          <span>Temp: </span><span>{currentWeatherState.temp}</span>
+        {/* <div className="temp-group"> */}
+          <span className="temp">Temp: </span><span className="temp-num">{currentWeatherState.temp}</span>
 
-          <span>Humidity: </span><span>{currentWeatherState.humidity}</span>
-          <span>Speed: </span><span>{currentWeatherState.speed}</span>
+          <span className="Humidity">Humidity: </span><span className="temp-num">{currentWeatherState.humidity}</span>
+          <span className="Speed">Speed: </span><span className="temp-num">{currentWeatherState.speed}</span>
 
-          <span>Min Temp: </span><span> {currentWeatherState.temp_min}</span>
-        </div>
+          <span className="Min">Min Temp: </span><span className="temp-num"> {currentWeatherState.temp_min}</span>
+        {/* </div> */}
       </div>
     </div>
   )

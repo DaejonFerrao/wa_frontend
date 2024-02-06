@@ -34,7 +34,7 @@ const SearchBar = ({ onSearchChange }) => {
 
     return (
         <div>
-            test
+            
         </div>
         // <AsyncPaginate
         //     placeholder="Search"
