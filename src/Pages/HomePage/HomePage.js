@@ -33,22 +33,32 @@ export const HomePage = () => {
           <input className="input" placeholder="Enter city name.." onChange={(e) => setCity(e.target.value)} />
         </form>
         <div className="top">
-        <div className="weather">
-          <span className="city">{currentWeatherState.country}</span>
-          <span className="desc">{currentWeatherState.name}</span>
-        </div>
+          <div className="weather">
+            <span className="city">{currentWeatherState.country}</span>
+            <span className="desc">{currentWeatherState.name}</span>
+          </div>
         </div>
 
         <div className="bottom">
           <div className="details">
-          <span className="para-label">Temp: </span><span className="para-value">{currentWeatherState.temp}</span>
+            <span className="temp-1">Temp:{currentWeatherState.temp}°C</span>
 
-          <span className="para-label">Humidity: </span><span className="para-value">{currentWeatherState.humidity}</span>
-          <span className="para-label">Speed: </span><span className="para-value">{currentWeatherState.speed}</span>
+            <div className="para-row">
+              <span className="para-label">Humidity: </span>
+              <span className="para-value">{currentWeatherState.humidity}</span>
+            </div>
 
-          <span className="para-label">Min Temp: </span><span className="para-value"> {currentWeatherState.temp_min}</span>
-      </div>
-      </div>
+            <div className="para-row">
+              <span className="para-label">Speed: </span>
+              <span className="para-value">{currentWeatherState.speed}</span>
+            </div>
+
+            <div className="para-row">
+              <span className="para-label">Min Temp: </span>
+              <span className="para-value"> {currentWeatherState.temp_min}</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
