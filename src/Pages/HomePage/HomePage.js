@@ -23,7 +23,7 @@ export const HomePage = () => {
   return (
 
     <div>
-      <div className="weather-data-group">
+      <div className="weather">
 
         <form onSubmit={(e) => {
           e.preventDefault()
@@ -32,20 +32,23 @@ export const HomePage = () => {
         }>
           <input className="input" placeholder="Enter city name.." onChange={(e) => setCity(e.target.value)} />
         </form>
-
-        <div className="weather-location-group">
-          <h1>{currentWeatherState.country}</h1>
-          <h1>{currentWeatherState.name}</h1>
+        <div className="top">
+        <div className="weather">
+          <span className="city">{currentWeatherState.country}</span>
+          <span className="desc">{currentWeatherState.name}</span>
+        </div>
         </div>
 
-        {/* <div className="temp-group"> */}
-          <span className="temp">Temp: </span><span className="temp-num">{currentWeatherState.temp}</span>
+        <div className="bottom">
+          <div className="details">
+          <span className="para-label">Temp: </span><span className="para-value">{currentWeatherState.temp}</span>
 
-          <span className="Humidity">Humidity: </span><span className="temp-num">{currentWeatherState.humidity}</span>
-          <span className="Speed">Speed: </span><span className="temp-num">{currentWeatherState.speed}</span>
+          <span className="para-label">Humidity: </span><span className="para-value">{currentWeatherState.humidity}</span>
+          <span className="para-label">Speed: </span><span className="para-value">{currentWeatherState.speed}</span>
 
-          <span className="Min">Min Temp: </span><span className="temp-num"> {currentWeatherState.temp_min}</span>
-        {/* </div> */}
+          <span className="para-label">Min Temp: </span><span className="para-value"> {currentWeatherState.temp_min}</span>
+      </div>
+      </div>
       </div>
     </div>
   )
