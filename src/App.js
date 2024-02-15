@@ -6,11 +6,11 @@ import NavBar from './Components/Navbar/NavBar';
 import { HomePage } from './Pages/HomePage/HomePage';
 import Register from './Pages/Register/Register';
 import Login from './Pages/Login/Login';
-import About from './Pages/About/About';
 import SearchBar from './Pages/SearchBar/SearchBar';
 import Weather from './Components/Weather/Weather';
 import { WEATHER_API_URL, WEATHER_API_KEY } from './Components/Api/Api';
 import Forecast from './Components/Forecast/Forecast';
+import Healthadvice from './Pages/Healthadvice/Healthadvice';
 
 function App() {
   const [weatherData, setCurrentWeatherData] = useState(null);
@@ -42,9 +42,9 @@ function App() {
         <NavBar />
         <Routes>
         <Route path="/Forecast" element={<Forecast />} />
-        <Route path="/About" element={<About />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
+        <Route path="/Healthadvice" element={<Healthadvice />} />
         <Route path={'/'} element={<HomePage/>}/>
         <Route path={'/Home'} element={<HomePage/>}/>
         </Routes>

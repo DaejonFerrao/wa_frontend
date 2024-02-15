@@ -32,8 +32,8 @@ export const HomePage = () => {
         }>
           <input className="input" placeholder="Enter city name.." onChange={(e) => setCity(e.target.value)} />
         </form>
-        <div className="top">
-          <div className="weather">
+        <div className="weather">
+          <div className="top">
             <span className="city">{currentWeatherState.country}</span>
             <span className="desc">{currentWeatherState.name}</span>
           </div>
