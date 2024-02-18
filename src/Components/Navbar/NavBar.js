@@ -8,8 +8,9 @@ const NavBar = () => {
             <div className="topnav">
                 <a href="Home">Home</a>
                 <a href="Register">Register</a>
-                <a href="Healthadvice">Healthadvice</a>
+                <a href="AirQuality">AirQuality</a>
                 <a href="Forecast">Forecast</a>
+                <a href="Health">Health</a>
             </div>
         </div>
     );

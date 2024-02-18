@@ -10,7 +10,8 @@ import SearchBar from './Pages/SearchBar/SearchBar';
 import Weather from './Components/Weather/Weather';
 import { WEATHER_API_URL, WEATHER_API_KEY } from './Components/Api/Api';
 import Forecast from './Components/Forecast/Forecast';
-import Healthadvice from './Pages/Healthadvice/Healthadvice';
+import AirQuality from './Pages/AirQuality/AirQuality';
+import Health from './Pages/Health/Health';
 
 function App() {
   const [weatherData, setCurrentWeatherData] = useState(null);
@@ -44,7 +45,8 @@ function App() {
         <Route path="/Forecast" element={<Forecast />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
-        <Route path="/Healthadvice" element={<Healthadvice />} />
+        <Route path="/AirQuality" element={<AirQuality />} />
+        <Route path="/Health" element={<Health />} />
         <Route path={'/'} element={<HomePage/>}/>
         <Route path={'/Home'} element={<HomePage/>}/>
         </Routes>
