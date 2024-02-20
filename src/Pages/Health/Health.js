@@ -1,15 +1,20 @@
 import { useState, useEffect } from 'react';
 import './Health.css';
+import axios from 'axios';
+import { currentWeater } from '../../WeatherService';
 
 function Health() {
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState(null);
+  const APIKey = 'bf2c20a1f20c38e0a1d11eb86ac5fe91';
+  const city = "london";
 
   useEffect(() => {
-    const fetchWeather = async () => {
+    const fetchWeather = async (city) => {
       try {
-        const WEATHER_API_KEY = "bf2c20a1f20c38e0a1d11eb86ac5fe91";
-        const response = await fetch(WEATHER_API_KEY);
+        const current_Weather = await currentWeater(city)
+        const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&units=metric`);
+        console.log(response.data)
         const data = await response.json();
         setWeather(data);
       } catch (error) {
