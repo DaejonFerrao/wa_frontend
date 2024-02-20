@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './AirQuality.css';
+import { currentWeater } from '../../WeatherService';
 
 function AirQuality() {
   const [airQualityData, setAirQualityData] = useState(null);
@@ -9,7 +10,8 @@ function AirQuality() {
     const fetchAirQualityData = async () => {
       try {
        const WEATHER_API_KEY = "bf2c20a1f20c38e0a1d11eb86ac5fe91";
-        const response = await axios.get(`http://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid=${WEATHER_API_KEY}`);
+        const response = await axios.get(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${currentWeater}&lon=${currentWeater}&appid=${WEATHER_API_KEY}`);
+        console.log(response.data)
         setAirQualityData(response.data);
       } catch (error) {
         console.error('Error fetching air quality data:', error);
@@ -18,6 +20,8 @@ function AirQuality() {
 
     fetchAirQualityData();
   }, []);
+
+  
 
   return (
     <div className="air-quality-container">
@@ -37,6 +41,4 @@ function AirQuality() {
 }
 
 export default AirQuality;
-
-
 

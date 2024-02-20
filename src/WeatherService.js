@@ -18,6 +18,7 @@ export const currentWeater = async (city) =>{
 
 
 export const getForecast = async (city) => {
+     const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&units=metric`
      //get the url same as above
      // get the forecast
      //log it to console
