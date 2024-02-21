@@ -13,3 +13,5 @@ export const WEATHER_API_KEY = "bf2c20a1f20c38e0a1d11eb86ac5fe91";
 
 export const AIR_POLLUTION_URL = "http://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={API key}"
 export const AIR_POLLUTION_API_KEY = "2b83bbcb1da3081a9f730fbe47340bc0"
+
+export const WEATHER_5_DAY = `api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid=${WEATHER_API_KEY}`

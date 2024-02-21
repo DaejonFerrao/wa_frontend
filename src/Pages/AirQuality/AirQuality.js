@@ -28,17 +28,53 @@ function AirQuality() {
   }, [city, APIKey]);
 
   
-
+  console.log(airQualityData)
   return (
     <div className="air-quality-container">
-      <h2 className="section-title">Air Quality Index</h2>
-      {airQualityData ? (
-        <div className="air-quality-data">
-          <p><strong>Location:</strong> {airQualityData.location}</p>
-          <p><strong>Current AQI:</strong> {airQualityData.currentAQI}</p>
-          <p><strong>Category: </strong> {airQualityData.category}</p>
-          <p><strong>Primary Pollutant:</strong> {airQualityData.primaryPollutant}</p>
+    <h2 className="section-title">Air Quality Index</h2>
+    {airQualityData ? (
+      <div className="air-quality-data">
+        <div className='air-poll'>
+          <span className="para-label"><strong>Location:</strong> 
+            {`${airQualityData.coord.lat}, ${airQualityData.coord.lon}`}
+          </span>   
         </div>
+        <div className='air-poll'>      
+          <span className='para-label'><strong>CO:</strong> 
+            {Math.round(airQualityData.list[0].components.co)}
+          </span>
+        </div>
+        <div className='air-poll'>
+          <span><strong>nh3:</strong> 
+            {airQualityData.list[0].components.nh3}
+          </span>
+        </div>
+        <div className='air-poll'>
+          <span><strong>no: </strong> 
+            {airQualityData.list[0].components.no}
+          </span>
+        </div>
+          <div className='air-poll'>
+          <span><strong>no2:</strong> 
+          {airQualityData.list[0].components.no2}</span>
+          </div>
+          <div className='air-poll'>
+          <span><strong>03:</strong> 
+          {Math.round(airQualityData.list[0].components.o3)}</span>
+          </div>
+          <div className='air-poll'>
+          <span><strong>pm2_5:</strong> 
+          {airQualityData.list[0].components.pm2}</span>
+          </div>
+          <div className='air-poll'>
+          <span><strong>pm10:</strong> 
+          {airQualityData.list[0].components.pm10}</span>
+          </div>
+          <div className='air-poll'>
+          <span><strong>so2:</strong> 
+          {airQualityData.list[0].components.so2}</span>
+          </div>
+       </div>
       ) : (
         <p className="loading-message">Loading air quality data...</p>
       )}
