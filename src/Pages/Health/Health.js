@@ -86,9 +86,27 @@ function Health() {
         <div className="health-tip">
           <h2>Mold: {weather && weather.weather[0].main === 'Clear' ? 'Low' : 'Medium'}</h2>
           <p>Might affect certain allergies:
-            {weather && weather.weather[0].main === 'Clear' ? '- None' : '- Flu'}
+            {weather && weather.weather[0].main === 'Clear' ? '- None' : '- Asthma'}
           </p>
         </div>
+        <div className="health-tip">
+          <h2>Tree Pollen: {weather && weather.weather[0].main === 'Clear' ? 'Low' : 'Medium'}</h2>
+          <p>Might affect certain allergies:
+            {weather && weather.weather[0].main === 'Clear' ? '- None' : '- Flu'}
+          </p>
+          </div>
+          <div className="health-tip">
+          <h2>Grass Pollen: {weather && weather.weather[0].main === 'Clear' ? 'Low' : 'Medium'}</h2>
+          <p>Might affect certain allergies:
+            {weather && weather.weather[0].main === 'Clear' ? '- None' : '- Migraine'}
+          </p>
+          </div>
+          <div className="health-tip">
+          <h2>Dust & Dander: {weather && weather.weather[0].main === 'Clear' ? 'Low' : 'Medium'}</h2>
+          <p>Might affect certain allergies:
+            {weather && weather.weather[0].main === 'Clear' ? '- None' : '- Sinius Pressure'}
+          </p>
+          </div>
         {/* Add more health tips as needed */}
       </div>
     </div>
